@@ -7,7 +7,7 @@ process TRIMM{
     tuple val(sample), path(reads)
 
     output:
-    tuple val(sample),path("${sample}_*.fastq.gz")
+    tuple val(sample),path("${sample}_1_paired.fastq.gz"),path("${sample}_2_paired.fastq.gz")
 
     script:
     def (read1,read2) = reads
