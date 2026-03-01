@@ -3,7 +3,7 @@ process BOWTIE2_INDEX {
     tag "${fasta.simpleName}"
 
     publishDir "${params.index_dir}", mode: 'copy'
-    
+
     input:
     path fasta
 
