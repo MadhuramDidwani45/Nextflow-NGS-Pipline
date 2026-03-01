@@ -8,7 +8,7 @@ process FASTQ_DUMP{
     val(sample)
 
     output:
-    path "*"
+    tuple val("${sample.baseName.minus('.sra')}"), path("*_{1,2}.fastq.gz")
 
     script:
     """
