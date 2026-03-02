@@ -8,16 +8,6 @@ This pipeline performs end-to-end germline variant calling starting from an SRA 
 
 ![Workflow Diagram](workflow.svg)
 
-The pipeline is organised into five stages shown above:
-
-| Stage | Colour | Steps |
-|-------|--------|-------|
-| ① Quality Control | 🟡 Yellow | FASTQ_DUMP → FASTQC → TRIMM → TRIMMED_FASTQC |
-| ② Reference & Alignment | 🔵 Blue | PREPARE_REFERENCE → BOWTIE2_INDEX → BOWTIE2_ALIGN |
-| ③ Pre-processing | 🟢 Green | SAMTOOLS → ADD_READ_GROUPS → MARK_DUPLICATES |
-| ④ BQSR | 🟣 Purple | BQSR (BaseRecalibrator) → APPLY_BQSR |
-| ⑤ Variant Calling | 🟠 Orange | HAPLOTYPECALLER → VARIANT_FILTRATION → VARIANT_ANNOTATOR |
-
 ---
 
 ## Quick Start
